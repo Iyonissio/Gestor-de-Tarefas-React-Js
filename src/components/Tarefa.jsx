@@ -11,6 +11,10 @@ const Tarefa = ({ tarefa, handleTarefaClick }) =>{
             <div className="tarefa-title" onClick={() => handleTarefaClick(tarefa.id)}>
                 {tarefa.title}    
             </div>
+
+            <div className="buttons-container">
+                <button className="remove-tarefa-button">X</button>
+            </div>
         </div>
     );
 };

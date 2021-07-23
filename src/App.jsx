@@ -40,7 +40,13 @@ const App = () => {
     ];
 
     setTarefas(novaTarefas);
-  }
+  };
+
+  const handleTarefaDeletion = (tarefaId) => {
+    const novaTarefas = tarefas.filter((tarefa) => tarefa.id !== tarefaId);
+  
+    setTarefas(novaTarefas);
+  };
   
   return (
     <>
