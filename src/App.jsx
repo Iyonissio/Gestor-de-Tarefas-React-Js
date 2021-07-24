@@ -7,6 +7,7 @@ import Tarefas from './components/Tarefas';
 
 import "./App.css";
 import AddTarefa from "./components/AddTarefa";
+import TarefaDetails from "./components/TarefaDetails";
 
 const App = () => {
   const [tarefas, setTarefas] = useState([
@@ -69,6 +70,7 @@ const App = () => {
               </>
             )}
           />
+          <Route path="/:tarefaTitle" exact component={TarefaDetails}/>
         </div>;
     </Router>
   );  

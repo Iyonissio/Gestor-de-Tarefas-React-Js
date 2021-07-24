@@ -13,12 +13,19 @@
     cursor: pointer;
 }
 
+.buttons-container{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .remove-tarefa-button {
     cursor: pointer;
     background-color: #444;
     border: none;
     font-size: 18px;
     color: chartreuse;
+    margin: 0 5px;
 }
 
 .see-tarefa-details-button {
@@ -27,4 +34,5 @@
     font-size: 18px;
     color: chartreuse;
     cursor: pointer;
+    margin: 0 5px;
 }

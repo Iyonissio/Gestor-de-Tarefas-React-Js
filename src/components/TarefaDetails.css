@@ -1,0 +1,20 @@
+.tarefa-details-container {
+    background: #ddd;
+    margin: 15px 0;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-radius: 5px;
+}
+
+.tarefa-details-container h2{
+    margin-bottom: 5px;
+    color: rebeccapurple;
+}
+
+.voltar-button-container {
+    width: 30%;
+    margin-top: 24px;
+}
+
