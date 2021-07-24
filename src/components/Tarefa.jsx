@@ -1,8 +1,9 @@
 import React from "react";
+import {CgClose, CgInfo} from 'react-icons/cg';
 
 import "./Tarefa.css";
 
-const Tarefa = ({ tarefa, handleTarefaClick }) =>{
+const Tarefa = ({ tarefa, handleTarefaClick, handleTarefaDeletion }) => {
     return (
         <div 
         className="tarefa-container " 
@@ -13,7 +14,15 @@ const Tarefa = ({ tarefa, handleTarefaClick }) =>{
             </div>
 
             <div className="buttons-container">
-                <button className="remove-tarefa-button">X</button>
+                <button className="remove-tarefa-button"
+                 onClick={() => handleTarefaDeletion(tarefa.id)}>
+                    <CgClose />
+                </button>
+
+                <button className="see-tarefa-details-button"
+                 >
+                    <CgInfo />
+                </button>
             </div>
         </div>
     );

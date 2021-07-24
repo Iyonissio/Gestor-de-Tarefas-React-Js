@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {v4 as uuidv4} from 'uuid';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
+import Header from './components/Header';
 import Tarefas from './components/Tarefas';
 
 import "./App.css";
@@ -25,6 +27,7 @@ const App = () => {
       if (tarefa.id === tarefaId) return { ...tarefa, completed: !tarefa.completed }
 
       return tarefa;
+
     });
     setTarefas(novaTarefas);
   };
@@ -49,12 +52,25 @@ const App = () => {
   };
   
   return (
-    <>
+    <Router>
         <div className="container">
-          <AddTarefa handleTarefaAddition={handleTarefaAddition}/>
-          <Tarefas tarefas={tarefas} handleTarefaClick={handleTarefaClick}/>  
+          <Header />
+          <Route 
+            path="/"
+            exact
+            render={() => (
+              <>
+                   <AddTarefa handleTarefaAddition={handleTarefaAddition}/>
+                   <Tarefas 
+                   tarefas={tarefas} 
+                   handleTarefaClick={handleTarefaClick}
+                   handleTarefaDeletion={handleTarefaDeletion}
+                  />  
+              </>
+            )}
+          />
         </div>;
-    </>
+    </Router>
   );  
 };
 
