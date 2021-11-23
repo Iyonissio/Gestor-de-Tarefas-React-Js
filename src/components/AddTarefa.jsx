@@ -23,7 +23,7 @@ const AddTarefa = ({handleTarefaAddition}) => {
       value={inputData}
       className="add-tarefa-input"
       type="text" 
-      />;
+      />
       <div className="add-tarefa-button-container">
         <Button onClick={handleAddTarefaClick}>Adicionar</Button>
       </div>
